@@ -32,7 +32,7 @@ async def start(event):
         await event.reply("**Bin-Checker is Alive**")
         return
     await event.reply(f"**Heya {event.sender.first_name}**\nIts a Bin-Checker Bot To Check Your Bins Are Valid Or Not.", buttons=[
-    [Button.url("Mʏ Sᴏᴜʀᴄᴇ Cᴏᴅᴇ", "https://github.com/TgxBotz/Bin-Checker")]
+    [Button.url("💬 My Owner", "https://t.me/MadBinner")]
     ])
 
 @bin.on(events.NewMessage(pattern="^[!?/]help$"))
@@ -44,7 +44,7 @@ async def help(event):
 - /help - To Get Help Menu
 - /bin - To check is your bin valid or not
 """
-    await event.reply(text, buttons=[[Button.url("Mʏ Sᴏᴜʀᴄᴇ Cᴏᴅᴇ", "https://github.com/TgxBotz/Bin-Checker")]])
+    await event.reply(text, buttons=[[Button.url("Join My Channel", "https://t.me/MadBinners")]])
 
 @bin.on(events.NewMessage(pattern="^[!?/]bin"))
 async def binc(event):
@@ -62,7 +62,7 @@ async def binc(event):
         me = (await event.client.get_me()).username
 
         valid = f"""
-<b>➤ Valid Bin:</b>
+<b>✅ Valid Bin:</b>
 
 <b>Bin -</b> <code>{input}</code>
 <b>Status -</b> <code>Valid Bin</code>
@@ -80,7 +80,7 @@ async def binc(event):
        await xx.edit("Plese provide a bin to check\n__`/bin yourbin`__")
     except KeyError:
         me = (await event.client.get_me()).username
-        await xx.edit(f"**➤ Invalid Bin:**\n\n**Bin -** `{input}`\n**Status -** `Invalid Bin`\n\n**Checked By -** @{me}\n**User-ID - {event.sender_id}**")
+        await xx.edit(f"**❌ Invalid Bin:**\n\n**Bin -** `{input}`\n**Status -** `Invalid Bin`\n\n**Checked By -** @{me}\n**User-ID - {event.sender_id}**")
 
 print ("Successfully Started")
 bin.run_until_disconnected()
