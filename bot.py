@@ -32,7 +32,7 @@ async def start(event):
         await event.reply("**Bin-Checker is Alive**")
         return
     await event.reply(f"**Heya {event.sender.first_name}**\nIts a Bin-Checker Bot To Check Your Bins Are Valid Or Not.", buttons=[
-    [Button.url("💬 My Owner", "https://t.me/MadBinner")]
+    [Button.url("💬 My Owner", "https://t.me/ofcLuffy14")]
     ])
 
 @bin.on(events.NewMessage(pattern="^[!?/]help$"))
